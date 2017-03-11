@@ -187,7 +187,7 @@
 
     <!-- Custom Head -->
     
-</head>
+<link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
 
 
     
@@ -409,7 +409,9 @@
         <a id="more"></a>
 <h4 id="通过url动态指定调用Action哪个方法而无需配置的method属性"><a href="#通过url动态指定调用Action哪个方法而无需配置的method属性" class="headerlink" title="通过url动态指定调用Action哪个方法而无需配置的method属性"></a>通过url动态指定调用Action哪个方法而无需配置<action>的method属性</action></h4><h4 id="开启动态调用"><a href="#开启动态调用" class="headerlink" title="开启动态调用:"></a>开启动态调用:</h4><pre><code>&lt;constant name=&quot;struts.enable.DynamicMethodInvocation&quot; value=&quot;true&quot;&gt;&lt;/constant&gt;
 </code></pre><h4 id="通过-i方法名-指定调用Action哪个方法"><a href="#通过-i方法名-指定调用Action哪个方法" class="headerlink" title="通过 i方法名  指定调用Action哪个方法"></a>通过 <strong>i方法名</strong>  指定调用Action哪个方法</h4><pre><code>localhost:8080/struts01/user!add.action
-</code></pre><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">action</span> <span class="attr">name</span>=<span class="string">"user"</span>   <span class="attr">class</span>=<span class="string">"cc.cn.action.UserAction"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">action</span>&gt;</span></div></pre></td></tr></table></figure>
+</code></pre><pre class=" language-xml"><code class="language-xml">    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>action</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>user<span class="token punctuation">"</span></span>   <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>cc.cn.action.UserAction<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>action</span><span class="token punctuation">></span></span>
+</code></pre>
 <h4 id="struts-xml没有指定method属性"><a href="#struts-xml没有指定method属性" class="headerlink" title="struts.xml没有指定method属性"></a>struts.xml没有指定method属性</h4><h4 id="但是-user-add-action-就会执行-UserAction-的-add-方法"><a href="#但是-user-add-action-就会执行-UserAction-的-add-方法" class="headerlink" title="但是 user!add.action 就会执行 UserAction 的 add 方法"></a>但是 user!add.action 就会执行 UserAction 的 add 方法</h4>
     
 
