@@ -4,8 +4,36 @@
   
     
     <entry>
+      <title><![CDATA[Action的动态方法调用]]></title>
+      <url>http://CloudNetwork.cc/2017/06/09/Struts2/%E8%AE%BF%E9%97%AEAction/Action%E7%9A%84%E5%8A%A8%E6%80%81%E6%96%B9%E6%B3%95%E8%B0%83%E7%94%A8/</url>
+      <content type="html"><![CDATA[<a id="more"></a>
+<h4 id="通过url动态指定调用Action哪个方法而无需配置的method属性"><a href="#通过url动态指定调用Action哪个方法而无需配置的method属性" class="headerlink" title="通过url动态指定调用Action哪个方法而无需配置的method属性"></a>通过url动态指定调用Action哪个方法而无需配置<action>的method属性</action></h4><h4 id="开启动态调用"><a href="#开启动态调用" class="headerlink" title="开启动态调用:"></a>开启动态调用:</h4><pre><code>&lt;constant name=&quot;struts.enable.DynamicMethodInvocation&quot; value=&quot;true&quot;&gt;&lt;/constant&gt;
+</code></pre><h4 id="通过-i方法名-指定调用Action哪个方法"><a href="#通过-i方法名-指定调用Action哪个方法" class="headerlink" title="通过 i方法名  指定调用Action哪个方法"></a>通过 <strong>i方法名</strong>  指定调用Action哪个方法</h4><pre><code>localhost:8080/struts01/user!add.action
+</code></pre><pre class=" language-xml"><code class="language-xml">    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>action</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>user<span class="token punctuation">"</span></span>   <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>cc.cn.action.UserAction<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>action</span><span class="token punctuation">></span></span>
+</code></pre>
+<h4 id="struts-xml没有指定method属性"><a href="#struts-xml没有指定method属性" class="headerlink" title="struts.xml没有指定method属性"></a>struts.xml没有指定method属性</h4><h4 id="但是-user-add-action-就会执行-UserAction-的-add-方法"><a href="#但是-user-add-action-就会执行-UserAction-的-add-方法" class="headerlink" title="但是 user!add.action 就会执行 UserAction 的 add 方法"></a>但是 user!add.action 就会执行 UserAction 的 add 方法</h4>]]></content>
+      
+        <categories>
+            
+            <category> Struts2 </category>
+            
+            <category> 访问Action </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> aa </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Hello World]]></title>
-      <url>http://CloudNetwork.cc/2017/03/10/hello-world/</url>
+      <url>http://CloudNetwork.cc/2017/05/22/hello-world/</url>
       <content type="html"><![CDATA[<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>qf<span class="token punctuation">.</span>web<span class="token punctuation">.</span>servlet<span class="token punctuation">;</span>
 
 <span class="token keyword">import</span> java<span class="token punctuation">.</span>io<span class="token punctuation">.</span>IOException<span class="token punctuation">;</span>
@@ -294,34 +322,6 @@
         <tags>
             
             <tag> Struts2 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Action的动态方法调用]]></title>
-      <url>http://CloudNetwork.cc/2017/02/09/Struts2/%E8%AE%BF%E9%97%AEAction/Action%E7%9A%84%E5%8A%A8%E6%80%81%E6%96%B9%E6%B3%95%E8%B0%83%E7%94%A8/</url>
-      <content type="html"><![CDATA[<a id="more"></a>
-<h4 id="通过url动态指定调用Action哪个方法而无需配置的method属性"><a href="#通过url动态指定调用Action哪个方法而无需配置的method属性" class="headerlink" title="通过url动态指定调用Action哪个方法而无需配置的method属性"></a>通过url动态指定调用Action哪个方法而无需配置<action>的method属性</action></h4><h4 id="开启动态调用"><a href="#开启动态调用" class="headerlink" title="开启动态调用:"></a>开启动态调用:</h4><pre><code>&lt;constant name=&quot;struts.enable.DynamicMethodInvocation&quot; value=&quot;true&quot;&gt;&lt;/constant&gt;
-</code></pre><h4 id="通过-i方法名-指定调用Action哪个方法"><a href="#通过-i方法名-指定调用Action哪个方法" class="headerlink" title="通过 i方法名  指定调用Action哪个方法"></a>通过 <strong>i方法名</strong>  指定调用Action哪个方法</h4><pre><code>localhost:8080/struts01/user!add.action
-</code></pre><pre class=" language-xml"><code class="language-xml">    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>action</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>user<span class="token punctuation">"</span></span>   <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>cc.cn.action.UserAction<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>action</span><span class="token punctuation">></span></span>
-</code></pre>
-<h4 id="struts-xml没有指定method属性"><a href="#struts-xml没有指定method属性" class="headerlink" title="struts.xml没有指定method属性"></a>struts.xml没有指定method属性</h4><h4 id="但是-user-add-action-就会执行-UserAction-的-add-方法"><a href="#但是-user-add-action-就会执行-UserAction-的-add-方法" class="headerlink" title="但是 user!add.action 就会执行 UserAction 的 add 方法"></a>但是 user!add.action 就会执行 UserAction 的 add 方法</h4>]]></content>
-      
-        <categories>
-            
-            <category> Struts2 </category>
-            
-            <category> 访问Action </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> aa </tag>
             
         </tags>
         

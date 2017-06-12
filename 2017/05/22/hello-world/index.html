@@ -10,7 +10,7 @@
     
     <title>
         
-            创建一个Struts2应用的详细步骤 | 
+            Hello World | 
         
         CloudNetwork
     </title>
@@ -27,7 +27,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="0.5">
     <meta name="description" content="null">
-    <meta name="keywords" content="null,Struts2">
+    <meta name="keywords" content="null,aa">
 
     <!--iOS -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -48,9 +48,9 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://CloudNetwork.cc">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="创建一个Struts2应用的详细步骤 | CloudNetwork">
+    <meta property="og:title" content="Hello World | CloudNetwork">
     <meta property="og:description" content="null">
-    <meta property="og:article:tag" content="Struts2"> 
+    <meta property="og:article:tag" content="aa"> 
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -234,7 +234,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#创建一个Struts2应用主要有一下几个步骤"><span class="post-toc-number">1.</span> <span class="post-toc-text">创建一个Struts2应用主要有一下几个步骤</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#一、创建WEB-工程"><span class="post-toc-number">2.</span> <span class="post-toc-text">　　一、创建WEB 工程</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#二、导入必要jar包"><span class="post-toc-number">3.</span> <span class="post-toc-text">　　二、导入必要jar包</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#三、编写JSP-页面"><span class="post-toc-number">4.</span> <span class="post-toc-text">　　三、编写JSP 页面</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#四、编写Action-服务器端处理逻辑"><span class="post-toc-number">5.</span> <span class="post-toc-text">　　四、编写Action 服务器端处理逻辑</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#五、进行框架配置web-xml、struts-xml"><span class="post-toc-number">6.</span> <span class="post-toc-text">　　五、进行框架配置web.xml、struts.xml</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#六、运行测试"><span class="post-toc-number">7.</span> <span class="post-toc-text">　　六、运行测试</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#详解"><span class="post-toc-number"></span> <span class="post-toc-text">详解</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#二、导入必要jar包-1"><span class="post-toc-number"></span> <span class="post-toc-text">二、导入必要jar包</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#三、编写JSP-页面-1"><span class="post-toc-number"></span> <span class="post-toc-text">三、编写JSP 页面</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#helloword-jsp-（发起请求页面）"><span class="post-toc-number"></span> <span class="post-toc-text">helloword.jsp （发起请求页面）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#添加对Struts2-框架的访问链接，默认情况下框架接受以-action请求，并进行处理。"><span class="post-toc-number"></span> <span class="post-toc-text">添加对Struts2 框架的访问链接，默认情况下框架接受以.action请求，并进行处理。</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#success-jsp-（结果页面）"><span class="post-toc-number"></span> <span class="post-toc-text">success.jsp  （结果页面）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#结果页面显示-struts2框架访问成功"><span class="post-toc-number"></span> <span class="post-toc-text">结果页面显示 struts2框架访问成功</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#四、编写Action-服务器端处理逻辑-1"><span class="post-toc-number"></span> <span class="post-toc-text">四、编写Action 服务器端处理逻辑</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#编写Action处理访问Struts2框架请求"><span class="post-toc-number">1.</span> <span class="post-toc-text">编写Action处理访问Struts2框架请求</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#struts2-的Action类似以前编写的Servlet程序，可以处理用户提交请求，但是Struts2的Action可以POJO对象"><span class="post-toc-number">2.</span> <span class="post-toc-text">struts2 的Action类似以前编写的Servlet程序，可以处理用户提交请求，但是Struts2的Action可以POJO对象</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#五、进行框架配置web-xml、struts-xml-1"><span class="post-toc-number"></span> <span class="post-toc-text">五、进行框架配置web.xml、struts.xml</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#配置Struts2核心控制器"><span class="post-toc-number"></span> <span class="post-toc-text">配置Struts2核心控制器</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#配置web-xml"><span class="post-toc-number"></span> <span class="post-toc-text">配置web.xml</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#过滤器配置-但是struts2默认处理-action结尾请求，分发到相应的action类"><span class="post-toc-number">1.</span> <span class="post-toc-text">过滤器配置/* ,但是struts2默认处理.action结尾请求，分发到相应的action类</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#配置struts-xml"><span class="post-toc-number"></span> <span class="post-toc-text">配置struts.xml</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#在src目录下建立struts-xml"><span class="post-toc-number">1.</span> <span class="post-toc-text">在src目录下建立struts.xml</span></a></li></ol>
+        
 
         <!--
         <li class="mdl-menu__item">
@@ -258,19 +258,11 @@
                 
     <!-- Paradox Post Header -->
     
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-            <script>
-    var randomNum = Math.floor(Math.random() * 19 + 1);
-
-    $('.post_thumbnail-random').css('background-image', 'url(' + '/img/random/material-' + randomNum + '.png' + ')');
-</script>
-
-        
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://example.com/image.jpg)">
     
             <p class="article-headline-p">
-                创建一个Struts2应用的详细步骤
+                Hello World
             </p>
         </div>
 
@@ -289,7 +281,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>0.5</strong>
-        <span>2月 09, 2017</span>
+        <span>5月 22, 2017</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -310,7 +302,7 @@
         </button>
         <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
             <li class="mdl-menu__item">在其它设备中阅读本文章</li>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASYAAAEmCAAAAADqr2IGAAAEHklEQVR42u3aW3LbMBAEQN3/0s4BYkkzCzoR182vlG1RQCNV2NfjyxM8DwSYMGHChAmTBxMmTJg+nukRP9+86K+fJ59NvmX282drm+0REyZMmDBtYnpzNY6YWpp8e7NVtXvEhAkTJkz7mJIFJVd1srgk1GgpZ8EBJkyYMGHClCyivchPjiQJCGbHjAkTJkyYMOV8SapZF15Hv8WECRMmTJjyAmhb2M3fkyfMSfL8n2vhmDBhwoTpw5jyi/m+//6n802YMGHChOljmNonbzG2IztXHVseKLzZKSZMmDBhWsF01ZZmRdi88ZmvsP1eTJgwYcK0m6n9+vP0Mn9PPqaThyzFoWLChAkTpkVMsxS0vW7zwOL1m/PQJBnWefpOTJgwYcK0gulN+hdsNUe5CjTffB7QYMKECROmrUwnV2bLl4QRr5ujbXJ7dPyYMGHChGkdU5QQBgHEVeM1bWF31lLFhAkTJky7mdokM6ecBRYnF3+eANftTEyYMGHCdHOmkxQ0T2vzAZ02SW4HjKL/KJgwYcKEaQVTfv3Pmoj5Nd8eXhtw5EkvJkyYMGHaxHQyuJMXUmetx9nwzQkiJkyYMGHaxzSjSUKKNrX+udLz8CAxYcKECdM6prxJ2TYyr/rLPOXOi7x1QIAJEyZMmG7FlH/9bIym3fwsnc7/HhMmTJgw/Tam2fU8S1zb5LYtGZ8fDyZMmDBh2sfUtgzzVHZWOJ4lsXm4kOwFEyZMmDBtYjrfcB4EnIDmAzqzkvGw64sJEyZMmG7INCvytonuI36+4icvUkfjPpgwYcKEaQXTLAVtl5Vf7bNPtaXkYdcXEyZMmDDdkGlGlqSabek2T25npeS8OYoJEyZMmPYx5Y3AWerbFmdnLcyTMnE934QJEyZMmG7FdFX59WSYJg8vzkOKo9QXEyZMmDDdiim/Jk/GRmfflRd/289iwoQJE6bfw5Rft7NS6WyUJz+Mk9bmm3diwoQJE6ZFTLOS6GxLM5pzjjzpxYQJEyZM+5iuaiK+XsrJO/NybXskw64vJkyYMGG6FVM+ztIGEPlCZ8czA4rWjwkTJkyYljK1S3wcPLOrPS/atkk4JkyYMGHaypS0J/MxmrYJmr+t5c6LwpgwYcKEaStTm6BeNawzw2pT6HzNmDBhwoRpK9N5wnlCkJeY8+PJS7pvgglMmDBhwrSCqS3I5k3HfFlJ+jpLp9vvwoQJEyZMW5nOU9bkYs4DgrwM3RZ2jwICTJgwYcJ0c6b8Qj0ZmpkN95xAzMrTmDBhwoQJU54et8QtTRLQ1KvFhAkTJkyYZgMxZYE4f88soHm6ckyYMGHCtI6pHdY5Kcu+bnzOgoOTI8GECRMmTLuZ2s3kbcv2SPLttSvJ34MJEyZMmDYxeaKAwIMJEyZMmDBh8mDChOlTnj9L8uJiJp142gAAAABJRU5ErkJggg==">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACcklEQVR42u3aW3KDQAwEQN//0skBUpCZFayxq/lKxebRfOzKI71+vvp44eHh4eHh4eHhPYz3io+js9r/H125PevwXnh4eHhbeP8staff+fuI58jzb56Dk2fDw8PD28lrb5kAzreN9mrRdoKHh4f3Ibzz6+RLfH5NPDw8vE/k/VPann4zDyPw8PDwnsxbixuObrkWB785a8HDw8OLeXmTaf/fW/t7eHh4eAGvHmmKF/e8pE42gE0zZXh4eHgBb1IKT5b1PJ5oXwceHh7eHl67rE+CgySKXWuS4eHh4e3hTVr456+jHRqYN+Hw8PDwdvKSh27BVxXZo9EBPDw8vBt4eRCQnJUv/e2nxb3w8PDwtvCS1tR83KotlJMXUcyU4eHh4V3Ey5fjZIFOGmZ1LFtGEnh4eHh380Y/++Mwdy3AzUt8PDw8vHfxJiXyJFBYa7Atxrh4eHh4F/Ha6DYplNeC2nbTwsPDw9vPy8OCfPmexBbtOMJi1oKHh4c34OWnJcdlTay4KK/3PTw8PLybee3A02RTWSv0RxsDHh4e3oCXF8EJph1HyDeMi1NqPDw8vAFvLQjIwWuDqnm8i4eHh/cuXjTSFC/WbaHcvqzFXwx4eHh4N/PyEau1Nn9yl1uGrvDw8PAGvLUWVxtY5E2v9gp4eHh4+3mTRbltdK1doQ5B8PDw8Lbw8iZTEjFMAuJbNgY8PDy823htUz+nrhXceQiCh4eH94m8fBtoX01b7uPh4eE9k9cGBMnG0L6g0egAHh4e3kW89rHaSGKySVwwdIWHh4d3KW8eASSF9aRoLqINPDw8vJt533fg4eHh4eHh4eE94PgF2xT3E+ZcCzsAAAAASUVORK5CYII=">
         </ul>
     
 
@@ -322,7 +314,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/Struts2/">Struts2</a>
+        <a class="post_tag-link" href="/tags/aa/">aa</a>
     </ul>
     
 
@@ -349,7 +341,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=创建一个Struts2应用的详细步骤&url=http://CloudNetwork.cc//2017/02/09/Struts2/Struts2入门/创建一个Struts2应用的详细步骤/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Hello World&url=http://CloudNetwork.cc//2017/05/22/hello-world/index.html&pic=&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -358,7 +350,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=创建一个Struts2应用的详细步骤&url=http://CloudNetwork.cc//2017/02/09/Struts2/Struts2入门/创建一个Struts2应用的详细步骤/index.html&via=0.5" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Hello World&url=http://CloudNetwork.cc//2017/05/22/hello-world/index.html&via=0.5" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -367,7 +359,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://CloudNetwork.cc//2017/02/09/Struts2/Struts2入门/创建一个Struts2应用的详细步骤/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://CloudNetwork.cc//2017/05/22/hello-world/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -376,7 +368,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://CloudNetwork.cc//2017/02/09/Struts2/Struts2入门/创建一个Struts2应用的详细步骤/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://CloudNetwork.cc//2017/05/22/hello-world/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -388,7 +380,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=CloudNetwork&title=创建一个Struts2应用的详细步骤&summary=null&pics=http://CloudNetwork.cc/img/favicon.png&url=http://CloudNetwork.cc/2017/02/09/Struts2/Struts2入门/创建一个Struts2应用的详细步骤/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=CloudNetwork&title=Hello World&summary=null&pics=http://CloudNetwork.cc/img/favicon.png&url=http://CloudNetwork.cc/2017/05/22/hello-world/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -406,69 +398,92 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <hr>
-<h4 id="创建一个Struts2应用主要有一下几个步骤"><a href="#创建一个Struts2应用主要有一下几个步骤" class="headerlink" title="创建一个Struts2应用主要有一下几个步骤"></a>创建一个Struts2应用主要有一下几个步骤</h4><h4 id="一、创建WEB-工程"><a href="#一、创建WEB-工程" class="headerlink" title="　　一、创建WEB 工程"></a>　　一、创建WEB 工程</h4><h4 id="二、导入必要jar包"><a href="#二、导入必要jar包" class="headerlink" title="　　二、导入必要jar包"></a>　　二、导入必要jar包</h4><h4 id="三、编写JSP-页面"><a href="#三、编写JSP-页面" class="headerlink" title="　　三、编写JSP 页面"></a>　　三、编写JSP 页面</h4><h4 id="四、编写Action-服务器端处理逻辑"><a href="#四、编写Action-服务器端处理逻辑" class="headerlink" title="　　四、编写Action 服务器端处理逻辑"></a>　　四、编写Action 服务器端处理逻辑</h4><h4 id="五、进行框架配置web-xml、struts-xml"><a href="#五、进行框架配置web-xml、struts-xml" class="headerlink" title="　　五、进行框架配置web.xml、struts.xml"></a>　　五、进行框架配置web.xml、struts.xml</h4><h4 id="六、运行测试"><a href="#六、运行测试" class="headerlink" title="　　六、运行测试"></a>　　六、运行测试</h4><a id="more"></a>
-<h3 id="详解"><a href="#详解" class="headerlink" title="详解"></a>详解</h3><hr>
-<h2 id="二、导入必要jar包-1"><a href="#二、导入必要jar包-1" class="headerlink" title="二、导入必要jar包"></a>二、导入必要jar包</h2><ul>
-<li>Struts运行必要jar包</li>
-<li>struts2-core-2.3.1.1.jar：Struts 2框架的核心类库</li>
-<li>xwork-core-2.3.1.1.jar：Command模式框架,WebWork和Struts2都基于xwork </li>
-<li>ognl-3.0.3.jar：对象图导航语言(Object Graph Navigation Language),  struts2框架通过其读写对象的属性</li>
-<li>freemarker-2.3.18.jar：Struts 2的UI标签的模板使用FreeMarker编写</li>
-<li>commons-logging-1.1.x.jar：ASF出品的日志包，Struts 2框架使用这个日志包来支持Log4J和JDK 1.4+的日志记录。</li>
-<li>commons-fileupload-1.2.2.jar： 文件上传组件，2.1.6版本后需要加入此文件</li>
-<li>commons-io-2.0.1.jar：传文件依赖的jar包</li>
-<li>commons-lang-2.5.jar：对java.lang包的增强</li>
-</ul>
-<blockquote>
-<p>开发中为了方便导入，可以使用app/struts2-blank.war 携带jar包</p>
-</blockquote>
-<hr>
-<h2 id="三、编写JSP-页面-1"><a href="#三、编写JSP-页面-1" class="headerlink" title="三、编写JSP 页面"></a>三、编写JSP 页面</h2><h3 id="helloword-jsp-（发起请求页面）"><a href="#helloword-jsp-（发起请求页面）" class="headerlink" title="helloword.jsp （发起请求页面）"></a>helloword.jsp （发起请求页面）</h3><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>${pageContext.request.contextPath}/hello.action<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> helloworld<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
-</code></pre>
-<h3 id="添加对Struts2-框架的访问链接，默认情况下框架接受以-action请求，并进行处理。"><a href="#添加对Struts2-框架的访问链接，默认情况下框架接受以-action请求，并进行处理。" class="headerlink" title="添加对Struts2 框架的访问链接，默认情况下框架接受以.action请求，并进行处理。"></a>添加对Struts2 框架的访问链接，默认情况下框架接受以.action请求，并进行处理。</h3><h3 id="success-jsp-（结果页面）"><a href="#success-jsp-（结果页面）" class="headerlink" title="success.jsp  （结果页面）"></a>success.jsp  （结果页面）</h3><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>你好，Struts2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>
-</code></pre>
-<h3 id="结果页面显示-struts2框架访问成功"><a href="#结果页面显示-struts2框架访问成功" class="headerlink" title="结果页面显示 struts2框架访问成功"></a>结果页面显示 struts2框架访问成功</h3><hr>
-<h2 id="四、编写Action-服务器端处理逻辑-1"><a href="#四、编写Action-服务器端处理逻辑-1" class="headerlink" title="四、编写Action 服务器端处理逻辑"></a>四、编写Action 服务器端处理逻辑</h2><h4 id="编写Action处理访问Struts2框架请求"><a href="#编写Action处理访问Struts2框架请求" class="headerlink" title="编写Action处理访问Struts2框架请求"></a>编写Action处理访问Struts2框架请求</h4><pre class=" language-java"><code class="language-java">    <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloAction</span> <span class="token punctuation">{</span>
-        <span class="token keyword">public</span> String <span class="token function">execute</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"hello world"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">return</span> <span class="token string">"success"</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 结果页面命名</span>
-        <span class="token punctuation">}</span>
+        <pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>qf<span class="token punctuation">.</span>web<span class="token punctuation">.</span>servlet<span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> java<span class="token punctuation">.</span>io<span class="token punctuation">.</span>IOException<span class="token punctuation">;</span>
+<span class="token keyword">import</span> java<span class="token punctuation">.</span>io<span class="token punctuation">.</span>PrintWriter<span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> javax<span class="token punctuation">.</span>jms<span class="token punctuation">.</span>Session<span class="token punctuation">;</span>
+<span class="token keyword">import</span> javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>ServletException<span class="token punctuation">;</span>
+<span class="token keyword">import</span> javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>http<span class="token punctuation">.</span>HttpServlet<span class="token punctuation">;</span>
+<span class="token keyword">import</span> javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>http<span class="token punctuation">.</span>HttpServletRequest<span class="token punctuation">;</span>
+<span class="token keyword">import</span> javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>http<span class="token punctuation">.</span>HttpServletResponse<span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> com<span class="token punctuation">.</span>qf<span class="token punctuation">.</span>web<span class="token punctuation">.</span>listener<span class="token punctuation">.</span>MyListener<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DealServlet</span> <span class="token keyword">extends</span> <span class="token class-name">HttpServlet</span> <span class="token punctuation">{</span>
+
+    <span class="token comment" spellcheck="true">/**
+         * Constructor of the object.
+         */</span>
+    <span class="token keyword">public</span> <span class="token function">DealServlet</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 </code></pre>
-<h4 id="struts2-的Action类似以前编写的Servlet程序，可以处理用户提交请求，但是Struts2的Action可以POJO对象"><a href="#struts2-的Action类似以前编写的Servlet程序，可以处理用户提交请求，但是Struts2的Action可以POJO对象" class="headerlink" title="struts2 的Action类似以前编写的Servlet程序，可以处理用户提交请求，但是Struts2的Action可以POJO对象"></a>struts2 的Action类似以前编写的Servlet程序，可以处理用户提交请求，但是Struts2的Action可以POJO对象</h4><hr>
-<h2 id="五、进行框架配置web-xml、struts-xml-1"><a href="#五、进行框架配置web-xml、struts-xml-1" class="headerlink" title="五、进行框架配置web.xml、struts.xml"></a>五、进行框架配置web.xml、struts.xml</h2><h3 id="配置Struts2核心控制器"><a href="#配置Struts2核心控制器" class="headerlink" title="配置Struts2核心控制器"></a>配置Struts2核心控制器</h3><h3 id="配置web-xml"><a href="#配置web-xml" class="headerlink" title="配置web.xml"></a>配置web.xml</h3><pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>filter</span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>filter-name</span><span class="token punctuation">></span></span>struts2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>filter-name</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>filter-class</span><span class="token punctuation">></span></span>
-    org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>filter-class</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>filter</span><span class="token punctuation">></span></span>
+<a id="more"></a>
+<pre class=" language-java"><code class="language-java">    <span class="token comment" spellcheck="true">/**
+         * Destruction of the servlet. &lt;br>
+         */</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// Just puts "destroy" string in log</span>
+        <span class="token comment" spellcheck="true">// Put your code here</span>
+    <span class="token punctuation">}</span>
 
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>filter-mapping</span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>filter-name</span><span class="token punctuation">></span></span>struts2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>filter-name</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url-pattern</span><span class="token punctuation">></span></span>/*<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url-pattern</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>filter-mapping</span><span class="token punctuation">></span></span>
-`
+    <span class="token comment" spellcheck="true">/**
+         * The doGet method of the servlet. &lt;br>
+         *
+         * This method is called when a form has its tag value method equals to get.
+         * 
+         * @param request the request send by the client to the server
+         * @param response the response send by the server to the client
+         * @throws ServletException if an error occurred
+         * @throws IOException if an error occurred
+         */</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">doGet</span><span class="token punctuation">(</span>HttpServletRequest request<span class="token punctuation">,</span> HttpServletResponse response<span class="token punctuation">)</span> <span class="token keyword">throws</span> ServletException<span class="token punctuation">,</span> IOException <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">doPost</span><span class="token punctuation">(</span>request<span class="token punctuation">,</span> response<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment" spellcheck="true">/**
+         * The doPost method of the servlet. &lt;br>
+         *
+         * This method is called when a form has its tag value method equals to post.
+         * 
+         * @param request the request send by the client to the server
+         * @param response the response send by the server to the client
+         * @throws ServletException if an error occurred
+         * @throws IOException if an error occurred
+         */</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">doPost</span><span class="token punctuation">(</span>HttpServletRequest request<span class="token punctuation">,</span> HttpServletResponse response<span class="token punctuation">)</span> <span class="token keyword">throws</span> ServletException<span class="token punctuation">,</span> IOException <span class="token punctuation">{</span>
+        request<span class="token punctuation">.</span><span class="token function">setCharacterEncoding</span><span class="token punctuation">(</span><span class="token string">"utf-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        String type <span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">getParameter</span><span class="token punctuation">(</span><span class="token string">"type"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token string">"enter"</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>type<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment" spellcheck="true">//代表用户上线</span>
+            String name <span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">getParameter</span><span class="token punctuation">(</span><span class="token string">"uname"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            MyListener listener <span class="token operator">=</span>  <span class="token keyword">new</span> <span class="token class-name">MyListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//监听器对象在程序中被创建对象了（实例化）  ，不需要再web.xml文件中注册</span>
+            listener<span class="token punctuation">.</span><span class="token function">setName</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">//创建session</span>
+            request<span class="token punctuation">.</span><span class="token function">getSession</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">"lister"</span><span class="token punctuation">,</span> listener<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// ---  调用valueBound()</span>
+            request<span class="token punctuation">.</span><span class="token function">getSession</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">"name"</span><span class="token punctuation">,</span> name<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//不会调用valueBound</span>
+            response<span class="token punctuation">.</span><span class="token function">sendRedirect</span><span class="token punctuation">(</span><span class="token string">"show.jsp"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token string">"logout"</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>type<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">//退出系统</span>
+            <span class="token comment" spellcheck="true">//session失效  或者在session中移除自定义监听器</span>
+            request<span class="token punctuation">.</span><span class="token function">getSession</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">invalidate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            response<span class="token punctuation">.</span><span class="token function">sendRedirect</span><span class="token punctuation">(</span><span class="token string">"enter.jsp"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+    <span class="token punctuation">}</span>
+
+    <span class="token comment" spellcheck="true">/**
+         * Initialization of the servlet. &lt;br>
+         *
+         * @throws ServletException if an error occurs
+         */</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> ServletException <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// Put your code here</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
 </code></pre>
-<h4 id="过滤器配置-但是struts2默认处理-action结尾请求，分发到相应的action类"><a href="#过滤器配置-但是struts2默认处理-action结尾请求，分发到相应的action类" class="headerlink" title="过滤器配置/* ,但是struts2默认处理.action结尾请求，分发到相应的action类"></a>过滤器配置/* ,但是struts2默认处理.action结尾请求，分发到相应的action类</h4><h3 id="配置struts-xml"><a href="#配置struts-xml" class="headerlink" title="配置struts.xml"></a>配置struts.xml</h3><h4 id="在src目录下建立struts-xml"><a href="#在src目录下建立struts-xml" class="headerlink" title="在src目录下建立struts.xml"></a>在src目录下建立struts.xml</h4><pre class=" language-xml"><code class="language-xml"><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8" ?></span>
-<span class="token doctype">&lt;!DOCTYPE struts PUBLIC
-    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
-    "http://struts.apache.org/dtds/struts-2.3.dtd"></span>
-
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>struts</span><span class="token punctuation">></span></span>
-
-    <span class="token comment" spellcheck="true">&lt;!-- 动态调用 --></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>constant</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>struts.enable.DynamicMethodInvocation<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>constant</span><span class="token punctuation">></span></span>
-    <span class="token comment" spellcheck="true">&lt;!--开发者模式  --></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>constant</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>struts.devMode<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>package</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>default<span class="token punctuation">"</span></span> <span class="token attr-name">namespace</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/<span class="token punctuation">"</span></span> <span class="token attr-name">extends</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>struts-default<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>action</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>user<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>com.qf.action.UserAction<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>action</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>package</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>struts</span><span class="token punctuation">></span></span>
-</code></pre>
-<hr>
 
     
 
@@ -497,9 +512,9 @@
 <div id="comments">
     <!-- 多说评论框 start -->
     <div class="ds-thread"
-        data-thread-key="2017/02/09/Struts2/Struts2入门/创建一个Struts2应用的详细步骤/"
-        data-url="http://CloudNetwork.cc/2017/02/09/Struts2/Struts2入门/创建一个Struts2应用的详细步骤/"
-        data-title="创建一个Struts2应用的详细步骤">
+        data-thread-key="2017/05/22/hello-world/"
+        data-url="http://CloudNetwork.cc/2017/05/22/hello-world/"
+        data-title="Hello World">
     </div>
     <!-- 多说评论框 end -->
 </div>
@@ -516,7 +531,7 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2017/02/10/Struts2/分享Struts2电子书/" id="post_nav-newer" class="prev-content">
+        <a href="/2017/06/09/Struts2/访问Action/Action的动态方法调用/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -530,7 +545,7 @@
 
     <!-- Next Nav -->
     
-        <a href="/2013/07/13/Struts2/struts/" id="post_nav-older" class="next-content">
+        <a href="/2017/02/10/Struts2/Struts2入门/Struts2入门/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
